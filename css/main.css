@@ -1,0 +1,359 @@
+/* RESET*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/************************************************************************MOBILE************************************************************************/
+.topBar {
+	background:#222222;
+}
+
+
+.sticky { background: transparent; 
+	transition: 0.7s;}
+	  
+	  .fixed {
+		  transition:box-shadow  0.3s;
+		  box-shadow: 0px 28px 57px 0px rgba(0,0,0,0.80);
+		  background: #fff;
+		position: fixed;
+		top:0; left:0;
+		width: 100%; 
+		z-index: 999;
+	}
+	.header {
+		background-size: cover;
+		background:url(../img/header-bg.jpg);
+	}
+	ul#menu-primary {
+		display: block;
+	}
+	
+.container {
+	max-width:95%;
+	margin:0 auto;
+	overflow: hidden;
+}
+.buttonHot{
+	background: #df003a;
+}
+.buttonHot:hover{
+	color: #df003a;
+}
+.buttonCold{
+	background: #0d98ba;
+
+}
+.buttonCold:hover{
+	color: #0d98ba;
+
+}
+.mainButton{
+    display: inline-block;
+	border: 1px solid transparent;
+	transition: 0.7s;
+	padding:3px 10px;
+	color:#fff;
+
+}
+
+main {
+	width: 100%;
+	float: none;
+}
+aside {
+	width: 100%;
+	float: none;
+}
+.thumbnailEffect {
+	transition: filter 0.3s;
+}
+.thumbnailEffect:hover {
+	filter: brightness(1.1);
+  -webkit-filter:brightness(1.1);
+}
+footer{
+	background:#222222;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*DESKTOP*/
+@media only screen and (min-width: 1200px) {
+.container {
+	max-width:1200px;
+
+}
+ul#menu-primary {
+	display: flex;
+	float: right;
+}
+ul#menu-primary:after {
+	display: block;
+	content:"";
+	clear:both;
+}
+ul#menu-primary li {
+    margin:0 15px;
+}
+ul#menu-primary li a {
+	text-decoration:none;
+	color:#000;
+	transition: 0.7s;
+}
+ul#menu-primary li a:hover {
+	text-decoration:underline;
+	color:#1E1E1E;
+}
+
+main{
+	width:75%;
+	float: left;
+}
+.mainButton:hover{
+	background: transparent;
+	border: 1px solid #eee;
+	cursor: pointer;
+
+}
+aside {
+	width:25%;
+	float: right;
+
+}
+}
