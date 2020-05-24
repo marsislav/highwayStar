@@ -79,6 +79,17 @@ table {
 .buttonHot:hover{
 	color: #df003a;
 }
+.categoryLabel a{
+	background: #df003a;
+	color:#fff;
+	display: inline-block;
+	border: 1px solid transparent;
+	transition: 0.7s;
+	padding:3px 10px;
+	color:#fff;
+	text-decoration: none;
+}
+
 .buttonCold{
 	background: #0d98ba;
 
@@ -110,6 +121,10 @@ aside {
 .thumbnailEffect:hover {
 	filter: brightness(1.1);
   -webkit-filter:brightness(1.1);
+}
+.thumbnail img {
+	width:100%;
+	height:auto;
 }
 footer{
 	background:#222222;
@@ -319,11 +334,17 @@ footer{
 	max-width:1200px;
 
 }
-ul#menu-primary {
+#primaryMenu ul.menu {
 	display: flex;
 	float: right;
 }
-ul#menu-primary:after {
+#primaryMenu ul.menu li {
+	margin:0 15px;
+}
+#primaryMenu ul.menu li:last-child {
+	margin:0 0 0 15px;
+}
+#primaryMenu ul.menu:after {
 	display: block;
 	content:"";
 	clear:both;
@@ -345,7 +366,11 @@ main{
 	width:75%;
 	float: left;
 }
-.mainButton:hover{
+.categoryLabel a:hover {
+	color:#df003a;
+}
+.mainButton:hover, .categoryLabel a:hover{
+	
 	background: transparent;
 	border: 1px solid #eee;
 	cursor: pointer;
@@ -355,5 +380,9 @@ aside {
 	width:25%;
 	float: right;
 
+}
+.formControl{
+	width: 77%;
+    height: 25px;
 }
 }
