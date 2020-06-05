@@ -44,12 +44,14 @@ table {
 }
 /************************************************************************MOBILE************************************************************************/
 .topBar {
-	background:#222222;
+	background:#04384d;
+	padding:6px 0;
 }
 
 
 .sticky { background: transparent; 
 	transition: 0.7s;}
+
 	  
 	  .fixed {
 		  transition:box-shadow  0.3s;
@@ -60,12 +62,30 @@ table {
 		width: 100%; 
 		z-index: 999;
 	}
+	.fixed .container .logo img{
+		width: auto;
+		height:80px;
+		padding:6px 0;
+		display:inline-block;
+	}
 	.header {
 		background-size: cover;
 		background:url(../img/header-bg.jpg);
 	}
+	.logo img{
+		width: auto;
+		height:120px;
+		padding:6px 0;
+		display:inline-block;
+	}
 	ul#menu-primary {
 		display: block;
+	}
+	nav#primaryMenu {
+		display:inline-block;
+		position: absolute;
+		top:50%;
+		right:0;
 	}
 	
 .container {
@@ -127,7 +147,7 @@ aside {
 	height:auto;
 }
 footer{
-	background:#222222;
+	background:#04384d;
 }
 
 

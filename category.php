@@ -8,7 +8,7 @@ while (have_posts() ){
   the_post();?>
  <div class="row">
     <?php
-get_template_part('partials/post/content-date');
+get_template_part('partials/post/content-category');
 
 ?>
 </div>
