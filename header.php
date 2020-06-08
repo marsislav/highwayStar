@@ -26,7 +26,7 @@
               <ul>
                 <?php 
                   if (get_theme_mod('hs_facebook_handle')){?>
-                    <li><a href="https://facebook.com/<?php echo get_theme_mod('hs_facebook_handle');?>">tytutyut</a></li>
+                    <li><a href="https://facebook.com/<?php echo get_theme_mod('hs_facebook_handle');?>"><i class="fab fa-facebook-f"></i></a></li>
                   <?php 
                   }
                 ?>
@@ -63,8 +63,10 @@
           </nav>
 
           </div>
+         
         </div>
-        <div class="topAdvert">
+
+        <div class="topAdvert container">
         <?php 
                     if( function_exists( 'quads_ad' ) ){
                         echo quads_ad([ 'location' => 'hs_header' ]);

@@ -1,12 +1,32 @@
 <?php get_header();?>
       
       <div class="container">
+      <div class="misc">
+        <div class="search">
+                
+        <?php if( get_theme_mod( 'hs_fixed_show_search' ) ){
+                 get_template_part('partials/global/fixed-search');
+                        }
+
+                        ?>
+
+        </div>
+        <div class="shop">
+                
+        <?php if( get_theme_mod( 'hs_fixed_show_cart' ) ){
+                 get_template_part('partials/global/fixed-cart');
+                        }
+
+                        ?>
+
+        </div>
+</div>
       <main>
         
         <?php if (have_posts()){
 while (have_posts() ){
   the_post();?>
- <div class="row">
+ <div class="row rowMargin">
     <?php
 get_template_part('partials/post/content-excerpt');
 
@@ -16,16 +36,10 @@ get_template_part('partials/post/content-excerpt');
 }
 }
 ?>
-       
-       
         <ul>
-          <li class="mainButton buttonHot">main bnt</li>
-          <li class="mainButton buttonHot">another btn</li>
+        <li class="mainButton buttonCold older"><?php next_posts_link('&larr; Older'); ?></li>
+        <li class="mainButton buttonHot newest"><?php previous_posts_link('&larr; Newer'); ?><li>
         </ul>
-        <?php 
-next_posts_link('&larr; Older');
-previous_posts_link('&larr; Newer');
-?>
         </main>
 <aside>
 <?php get_sidebar ();?>
@@ -33,4 +47,6 @@ previous_posts_link('&larr; Newer');
 
 
       </div>
+
+
       <?php get_footer();?>
