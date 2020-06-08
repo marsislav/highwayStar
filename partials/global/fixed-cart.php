@@ -1,3 +1,3 @@
 <div id="fixed-cart">
-cart
+<i class="fas fa-shopping-cart"></i>
 </div>

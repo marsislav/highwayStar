@@ -1,5 +1,6 @@
 <!-- Top Search
                             ============================================= -->
+                            <i class="fas fa-search"></i>
                             <div id="fixed-search">
                                 <a href="#" id="top-search-trigger">
                                     <i class="icon-search3"></i><i class="icon-line-cross"></i>
