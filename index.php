@@ -22,9 +22,18 @@
         </div>
 </div>
       <main>
-        
+        <?php
+               if (!is_single() && is_home() && function_exists('wpp_get_mostpopular')) {
+                wpp_get_mostpopular([
+                        'wpp_start' =>'<div class="">Most pop post',
+                        'wpp_end' =>'</div>'
+                ]); ?>
+                <p>most poulr posts</p>
+               <?php }
+        ?>
         <?php if (have_posts()){
 while (have_posts() ){
+
   the_post();?>
  <div class="row rowMargin">
     <?php

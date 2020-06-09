@@ -31,13 +31,6 @@ function hs_misc_customizer_section( $wp_customize ){
         'default'       =>  'Breaking News'
     ]);
 
-    $wp_customize->add_setting( 'hs_read_more_color', [
-        'default'       =>  '#1ABC9C'
-    ]);
-
-    $wp_customize->add_setting( 'hs_report_file', [
-        'default'       =>  ''
-    ]);
 
     $wp_customize->add_section( 'hs_misc_section', [
         'title'         =>  __( 'HighwayStar Misc Settings', 'hs' ),
@@ -105,29 +98,7 @@ function hs_misc_customizer_section( $wp_customize ){
         )
     ));
 
-    $wp_customize->add_control(
-        new WP_Customize_Color_Control( 
-            $wp_customize, 
-            'hs_read_more_color_input', 
-            array(
-                'label'      => __( 'Read more link color', 'hs' ),
-                'section'    => 'hs_misc_section',
-                'settings'   => 'hs_read_more_color',
-            )
-        ) 
-    );
-
-    $wp_customize->add_control(
-        new WP_Customize_Upload_Control( 
-            $wp_customize, 
-            'hs_report_file_input', 
-            array(
-                'label'      => __( 'File Report', 'hs' ),
-                'section'    => 'hs_misc_section',
-                'settings'   => 'hs_report_file',
-            ) 
-        ) 
-    );
+  
 
     $wp_customize->add_control(
         new WP_Customize_Control( 

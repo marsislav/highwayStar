@@ -1,7 +1,11 @@
 
       <footer>
       <div class="container">
-                 <div class="footerSocial">
+            
+              <div class="copyright">
+              <?php echo get_theme_mod( 'hs_footer_copyright_text'); ?>  
+              </div>
+              <div class="footerSocial">
               <ul>
                 <?php 
                   if (get_theme_mod('hs_facebook_handle')){?>
@@ -9,10 +13,32 @@
                   <?php 
                   }
                 ?>
+                       <?php 
+                  if (get_theme_mod('hs_twitter_handle')){?>
+                    <li><a href="https://twitter.com/<?php echo get_theme_mod('hs_twitter_handle');?>"><i class="fab fa-twitter"></i></a></li>
+                  <?php 
+                  }
+                ?>
+                       <?php 
+                  if (get_theme_mod('hs_instagram_handle')){?>
+                    <li><a href="https://instagram.com/<?php echo get_theme_mod('hs_instagram_handle');?>"><i class="fab fa-instagram"></i></a></li>
+                  <?php 
+                  }
+                ?>
+                       <?php 
+                  if (get_theme_mod('hs_email')){?>
+                    <li><a href="mailto:<?php echo get_theme_mod('hs_email');?>"><i class="far fa-envelope"></i></a></li>
+                  <?php 
+                  }
+                ?>
+                       <?php 
+                  if (get_theme_mod('hs_phone_number')){?>
+                    <li><a href="tel:<?php echo get_theme_mod('hs_phone_number');?>"><i class="fas fa-phone"></i></a></li>
+                  <?php 
+                  }
+                ?>
               </ul>
-              <div class="copyright">
-              <?php echo get_theme_mod( 'hs_footer_copyright_text'); ?>  
-              </div>
+            </div>
               <div class="defPages">
                   <?php
                     if (get_theme_mod('hs_footer_tos_page')){?>

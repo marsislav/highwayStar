@@ -17,8 +17,8 @@
                 'theme_location'=>'secondary',
                 'container'=>false,
                 'fallback_cb'=>false,
-                'depth'=>1
-                //'menu-class'=>
+                'depth'=>1,
+                'menu-class'=>'top-bar-menu'
               ]);
             }
             ?>
@@ -30,8 +30,33 @@
                   <?php 
                   }
                 ?>
+                       <?php 
+                  if (get_theme_mod('hs_twitter_handle')){?>
+                    <li><a href="https://twitter.com/<?php echo get_theme_mod('hs_twitter_handle');?>"><i class="fab fa-twitter"></i></a></li>
+                  <?php 
+                  }
+                ?>
+                       <?php 
+                  if (get_theme_mod('hs_instagram_handle')){?>
+                    <li><a href="https://instagram.com/<?php echo get_theme_mod('hs_instagram_handle');?>"><i class="fab fa-instagram"></i></a></li>
+                  <?php 
+                  }
+                ?>
+                       <?php 
+                  if (get_theme_mod('hs_email')){?>
+                    <li><a href="mailto:<?php echo get_theme_mod('hs_email');?>"><i class="far fa-envelope"></i></a></li>
+                  <?php 
+                  }
+                ?>
+                       <?php 
+                  if (get_theme_mod('hs_phone_number')){?>
+                    <li><a href="tel:<?php echo get_theme_mod('hs_phone_number');?>"><i class="fas fa-phone"></i></a></li>
+                  <?php 
+                  }
+                ?>
               </ul>
             </div>
+    
        </div>
       </div>
       </div>
