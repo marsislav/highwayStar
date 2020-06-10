@@ -52,13 +52,7 @@
                   ?>
               </div>
             </div>
-       
-     
-        </div>
          </footer>
-      <?php wp_footer(); ?>
-      </body>
-      </html>
-      
+      <?php wp_footer(); ?>   
 </body>
 </html>

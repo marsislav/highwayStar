@@ -4,22 +4,23 @@ if (post_password_required()){
 }
 ?>
 <?php if (have_comments()) {?>
-    <ol class="commentList">
-<?php
+    <h3><span><?php comments_number(); ?></span></h3>
+<ol class="commentList">
+    <?php
 foreach ($comments as $comment) { ?>
-<li>
-<div class="userAvatar">
-<?php echo get_avatar($comment,  '', "", ['class'=>'userAvatarImg']);?>
+    <li>
+        <div class="userAvatar">
+            <?php echo get_avatar($comment,  '', "", ['class'=>'userAvatarImg']);?>
 
-</div>
-<div class="commentsMeta"> 
-<h3><span><?php comments_number(); ?></span></h3>
-    <?php comment_author();?>
-    <span> <?php comment_date();?></span>
-</div>
-<?php comment_text();?>
-</li>
-<?php }
+        </div>
+        <div class="commentsMeta">
+            
+            <?php comment_author();?>
+            <span> <?php comment_date();?></span>
+        </div>
+        <?php comment_text();?>
+    </li>
+    <?php }
 the_comments_pagination();
 ?>
 </ol>
@@ -27,9 +28,9 @@ the_comments_pagination();
 
 <?php
 comment_form([
-    'comment_field'         =>  '<div class="clear"></div>
+    'comment_field'=>'<div class="clear"></div>
 
-    <div class="col_full">
+    <div>
         <label>Comment</label>
         <textarea name="comment" cols="58" rows="7" class="sm-form-control"></textarea>
     </div>',

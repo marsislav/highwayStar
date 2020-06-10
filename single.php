@@ -1,20 +1,17 @@
  <?php get_header();?>
- <div class="container">
+ <div id="post-<?php the_ID('container'); ?>" <?php post_class('container'); ?> >
      <main>
          <?php if (have_posts()){
-                                while (have_posts() ){
-                                        the_post();
-                                       
-                                        ?>
-
+            while (have_posts() ){
+                the_post();
+        ?>
          <?php
-                                get_template_part('partials/post/content-single');
-                        ?>
-
+            get_template_part('partials/post/content-single');
+        ?>
          <?php
-                                                     }
-                                                }
-                        ?>
+                }
+            }
+        ?>
          <div class="tags">
              <?php the_tags('', ' ');?>
          </div>
@@ -43,4 +40,5 @@
                 <?php get_template_part('partials/post/posts-additional');?>
                 </div>
              </div>
+         </div>
  <?php get_footer();?>

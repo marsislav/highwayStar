@@ -4,7 +4,7 @@
 ============================================= -->
 <section id="page-title">
     <div class="container clearfix">
-        <h1><?php _e( 'Search Results for:', 'udemy' ); ?> <?php the_search_query(); ?></h1>
+        <h1><?php _e( 'Search Results for:', 'hs' ); ?> <?php the_search_query(); ?></h1>
     </div>
 </section><!-- #page-title end -->
 
@@ -31,7 +31,7 @@
                 <!-- Search Box
                 ============================================= -->
                 <div class="col_full card">
-                    <div class="card-header"><?php _e( 'What are you searhing for today?', 'udemy' ); ?></div>
+                    <div class="card-header"><?php _e( 'What are you searhing for today?', 'hs' ); ?></div>
                     <div class="card-body">
                         <?php get_search_form(); ?>
                     </div>

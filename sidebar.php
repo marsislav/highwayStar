@@ -3,3 +3,5 @@
 dynamic_sidebar('hs_sidebar');
 
 }
+?>
+</div>

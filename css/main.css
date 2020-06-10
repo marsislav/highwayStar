@@ -65,9 +65,10 @@ h6 {font-size: 18px;}
 	padding:6px 0;
 }
 
-ul#menu-top-bar-menu, .topBar ul.menu, .topSocial ul, .relatedPosts, .footerSocial ul{
+ul#menu-top-bar-menu, .topBar ul.menu, .topSocial ul, .relatedPostsContainer, .footerSocial ul{
 	display: flex;
 }
+
 ul#menu-top-bar-menu, .topBar ul.menu, footer .copyright {
 	float: left;
 }
@@ -267,6 +268,9 @@ main {
 	width: 100%;
 	float: none;
 }
+.content{
+	 margin-top:15px;
+}
 h2 {
 	margin-bottom:10px;
 }
@@ -330,6 +334,8 @@ display:inline-block;
 	top: 50%;
 	transform: translate(0%,-50%);
 }
+
+
 /*Specific templates styling*/
 .post-template-default main, .single main, .single-post main {
 	width:100%;
@@ -339,6 +345,19 @@ display:inline-block;
 	background:rgb(171, 145, 212);
 	padding: 6px 0;
 } 
+.commentsForm{
+	margin-top:30px;
+}
+/*Bottom*/
+.footerSocial:after{
+	content:" ";
+	display: block;
+	clear: both;
+}
+.relatedPostsContainer {
+	justify-content: space-between;
+}
+
 /*DESKTOP*/
 @media only screen and (min-width: 1200px) {
 
