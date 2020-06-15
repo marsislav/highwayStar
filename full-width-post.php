@@ -4,6 +4,7 @@
 * template Post type: Post
 
  */
+?>
 <?php get_header();?>
  <div class="container">
      <main>

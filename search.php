@@ -1,94 +1,40 @@
-<?php get_header(); ?>
+<?php get_header();?>
+      
+      <div class="container">
+      <main>
 
-<!-- Page Title
-============================================= -->
-<section id="page-title">
-    <div class="container clearfix">
-        <h1><?php _e( 'Search Results for:', 'hs' ); ?> <?php the_search_query(); ?></h1>
-    </div>
-</section><!-- #page-title end -->
+     <h1><?php _e( 'Search Results for:', 'hs' ); ?> <?php the_search_query(); ?></h1>
+     <?php get_search_form(); ?>
 
-<!-- Content
-============================================= -->
-<section id="content">
+     
+        <?php if (have_posts()){
+while (have_posts() ){
 
-    <div class="content-wrap">
+  the_post();?>
+ <div class="row rowMargin">
+    <?php
+get_template_part('partials/post/content-excerpt');
 
-        <div class="container clearfix">
+?>
+</div>
+<?php
+}
+}
+?>
+        <ul>
+        <li class="mainButton buttonCold older"><?php next_posts_link('&larr; Older'); ?></li>
+        <li class="mainButton buttonHot newest"><?php previous_posts_link('&larr; Newer'); ?><li>
+        </ul>
+        </main>
+<aside>
+<?php get_sidebar ();?>
+</aside>
 
-            <!-- Post Content
-            ============================================= -->
-            <div class="postcontent nobottommargin clearfix">
 
-                <?php
+      </div>
 
-                // echo get_search_link( 'Hello' );
-                // echo '<br>';
-                // the_search_query();
 
-                ?>
+      <?php get_footer();?>
 
-                <!-- Search Box
-                ============================================= -->
-                <div class="col_full card">
-                    <div class="card-header"><?php _e( 'What are you searhing for today?', 'hs' ); ?></div>
-                    <div class="card-body">
-                        <?php get_search_form(); ?>
-                    </div>
-                </div>
-                <!-- Search Box End -->
 
-                <!-- Posts
-                ============================================= -->
-                <div id="posts">
 
-                    <?php
-
-                    if( have_posts() ){
-                        while( have_posts() ){
-                            the_post();
-
-                            // content-excerpt.php
-                            get_template_part( 'partials/post/content-excerpt' );
-                            // 1) content-excerpt.php 2) content.php
-                            // get_template_part( 'partials/post/content', 'excerpt' );
-                        }
-                    }
-
-                    ?>
-                    
-
-                </div><!-- #posts end -->
-
-                <!-- Pagination
-                ============================================= -->
-                <div class="row mb-3">
-                    <div class="col-12">
-                        <?php
-
-                        next_posts_link( '&larr; Older' );
-
-                        previous_posts_link( 'Newer &rarr;' );
-
-                        ?>
-                        <!-- <a href="#" class="btn btn-outline-secondary float-left">
-                            &larr; Older
-                        </a>
-                        <a href="#" class="btn btn-outline-dark float-right">
-                            Newer &rarr;
-                        </a>-->
-                    </div>
-                </div>
-                <!-- .pager end -->
-
-            </div><!-- .postcontent end -->
-
-            <?php get_sidebar(); ?>
-
-        </div>
-
-    </div>
-
-</section><!-- #content end -->
-
-<?php get_footer(); ?>

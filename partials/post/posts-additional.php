@@ -1,9 +1,10 @@
-<?php previous_post_link();?>
-<?php next_post_link ();?>
-<?php 
-        next_posts_link('&larr; Older');
-        previous_posts_link('&larr; Newer');
-?>
+<div class="prev">
+    <?php previous_post_link();?>
+</div>
+<div class="next">
+    <?php next_post_link ();?>
+</div>
+
 <?php 
     $categories=get_the_category();
     $rp_query=new WP_Query

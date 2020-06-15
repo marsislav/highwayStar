@@ -71,8 +71,10 @@ ul#menu-top-bar-menu, .topBar ul.menu, .topSocial ul, .relatedPostsContainer, .f
 
 ul#menu-top-bar-menu, .topBar ul.menu, footer .copyright {
 	float: left;
+	color:#fff;
+	margin-bottom: 6px;
 }
-ul#menu-top-bar-menu li, .topBar ul.menu li, .topSocial ul li, .footerSocial ul li{
+ul#menu-top-bar-menu li, .topBar ul.menu li, .topSocial ul li, .footerSocial ul li, .defPages a{
 	margin:0 15px 0 0;
 }
 .topSocial ul, .footerSocial ul {
@@ -83,17 +85,17 @@ ul#menu-top-bar-menu li, .topBar ul.menu li, .topSocial ul li, .footerSocial ul 
 	content:" ";
 	clear: both;
 }
-.topBar ul.menu li  a, .topBar ul li  a, footer ul li  a {
+.topBar ul.menu li  a, .topBar ul li  a, footer ul li  a, .defPages a {
 	position: relative;
 	color: #fff;
 	text-decoration:none;
 	text-transform: uppercase;
 	font-size:15px;
   }
-  .topBar ul.menu li  a:hover, .topBar ul li  a:hover, footer ul li  a:hover {
+  .topBar ul.menu li  a:hover, .topBar ul li  a:hover, footer ul li  a:hover, .defPages a:hover{
 	color: rgb(171, 145, 212);
   }
-  .topBar ul.menu li a:before, .topBar ul li a:before,  footer ul li a:before {
+  .topBar ul.menu li a:before, .topBar ul li a:before,  footer ul li a:before, .defPages a:before {
 	content: "";
 	position: absolute;
 	width: 100%;
@@ -107,7 +109,7 @@ ul#menu-top-bar-menu li, .topBar ul.menu li, .topSocial ul li, .footerSocial ul 
 	-webkit-transition: all 0.3s ease-in-out 0s;
 	transition: all 0.3s ease-in-out 0s;
   }
-  .topBar ul.menu li a:hover:before,  .topBar ul li a:hover:before, footer ul li a:hover:before {
+  .topBar ul.menu li a:hover:before,  .topBar ul li a:hover:before, footer ul li a:hover:before, .defPages a:hover:before {
 	visibility: visible;
 	background-color: rgb(171, 145, 212);
 	-webkit-transform: scaleX(1);
@@ -344,6 +346,7 @@ display:inline-block;
 .posts-additional {
 	background:rgb(171, 145, 212);
 	padding: 6px 0;
+	position: relative;
 } 
 .commentsForm{
 	margin-top:30px;
@@ -354,6 +357,7 @@ display:inline-block;
 	display: block;
 	clear: both;
 }
+
 .relatedPostsContainer {
 	justify-content: space-between;
 }
