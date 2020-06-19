@@ -47,7 +47,7 @@ get_template_part('partials/post/content-excerpt');
 ?>
         <ul>
         <li class="mainButton buttonCold older"><?php next_posts_link('&larr; Older'); ?></li>
-        <li class="mainButton buttonHot newest"><?php previous_posts_link('&larr; Newer'); ?><li>
+        <li class="mainButton buttonHot newer"><?php previous_posts_link('&larr; Newer'); ?><li>
         </ul>
         </main>
 <aside>

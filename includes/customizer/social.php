@@ -2,23 +2,28 @@
 
 function hs_social_customizer_section( $wp_customize ){
     $wp_customize->add_setting( 'hs_facebook_handle', [ 
-        'default'   =>  ''
+        'default'   =>  '',
+        'sanitize_callback' => 'wp_filter_nohtml_kses'
     ]);
 
     $wp_customize->add_setting( 'hs_twitter_handle', array(
         'default'                   =>  '',
+        'sanitize_callback' => 'wp_filter_nohtml_kses'
     ));
 
     $wp_customize->add_setting( 'hs_instagram_handle', array(
         'default'                   =>  '',
+        'sanitize_callback' => 'wp_filter_nohtml_kses'
     ));
 
     $wp_customize->add_setting( 'hs_email', array(
         'default'                   =>  '',
+        'sanitize_callback' => 'wp_filter_nohtml_kses'
     ));
 
     $wp_customize->add_setting( 'hs_phone_number', array(
         'default'                   =>  '',
+        'sanitize_callback' => 'wp_filter_nohtml_kses'
     ));
 
     $wp_customize->add_section( 'hs_social_section', [

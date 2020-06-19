@@ -8,7 +8,7 @@ small, strike, strong, sub, sup, tt, var,
 b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
+table, caption, tbody, tfoot, thead, tr, th, td, textarea, input,
 article, aside, canvas, details, embed, 
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
@@ -19,6 +19,7 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+	box-sizing: border-box;
 }
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
@@ -59,6 +60,36 @@ h4{
 }
 h5 {font-size: 20px;}
 h6 {font-size: 18px;}
+.fa-calendar-alt, .fa-folder-open, .fa-comment, .fa-user-alt {
+	margin-right: 7px;
+}
+
+
+.wp-caption {
+	text-align: center;
+	margin: 10px 20px 13px 20px;
+	font-style: italic;
+}
+
+.wp-caption img,
+.wp-caption img a {
+	display: block;
+	margin: 0;
+}
+
+p.wp-caption-text {
+	display: inline-block;
+	margin: 10px 0 0 0;
+	padding: 5px 10px;
+	background-color: #EEE;
+	border-radius: 50px;
+}
+
+.wp-smiley {
+	max-height: 13px;
+	margin: 0 !important;
+}
+
 /************************************************************************MOBILE************************************************************************/
 .topBar, footer {
 	background:#04384d;
@@ -193,15 +224,16 @@ ul.menu li  a {
   }
 /**/
 /*Other links*/
-h2  a {
+h2  a, .mainSidebar ul li a, td a, .wp-calendar-nav span a, ul.meta-tags li a {
 	position: relative;
-	color: #04384D;
+	color: #2782a7;
 	text-decoration:none;
+	
   }
-  h2  a:hover {
+  h2  a:hover, .mainSidebar ul li a:hover, td a:hover, .wp-calendar-nav span a:hover, ul.meta-tags li a:hover {
 	color: #DF003A;
   }
-	h2 a:before {
+	h2 a:before, .mainSidebar ul li a:before, td a:before, .wp-calendar-nav span a:before, ul.meta-tags li a:before {
 	content: "";
 	position: absolute;
 	width: 100%;
@@ -215,7 +247,7 @@ h2  a {
 	-webkit-transition: all 0.3s ease-in-out 0s;
 	transition: all 0.3s ease-in-out 0s;
   }
-  h2 a:hover:before {
+  h2 a:hover:before, .mainSidebar ul li a:hover:before, td a:hover:before, .wp-calendar-nav span a:hover:before, ul.meta-tags li a:hover:before {
 	visibility: visible;
 	background-color: #04384D;
 	-webkit-transform: scaleX(1);
@@ -262,7 +294,7 @@ h2  a {
 
 }
 
-.mainButton.buttonHot:empty,.mainButton.buttonCold:empty {
+.mainButton.buttonHot.newer:empty,.mainButton.buttonCold.older:empty {
 	display:none;
 }
 
@@ -336,7 +368,9 @@ display:inline-block;
 	top: 50%;
 	transform: translate(0%,-50%);
 }
-
+.excerpt {
+	margin-top: 7px;
+}
 
 /*Specific templates styling*/
 .post-template-default main, .single main, .single-post main {
@@ -349,8 +383,22 @@ display:inline-block;
 	position: relative;
 } 
 .commentsForm{
-	margin-top:30px;
+	margin:30px 0;
 }
+.commentList{
+	margin-bottom:30px;
+}
+.commentsForm textarea, .commentsForm input[type=text]  {
+	width:100%;
+	display: block;
+	border:1px solid #04384D;
+	margin: 10px 0;
+}
+.commentsForm textarea:focus, .commentsForm input[type=text]:focus  {
+	border:1px solid #DF003A;
+	outline: none !important;
+}
+
 /*Bottom*/
 .footerSocial:after{
 	content:" ";

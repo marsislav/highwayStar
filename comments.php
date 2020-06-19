@@ -28,30 +28,29 @@ the_comments_pagination();
 
 <?php
 comment_form([
-    'comment_field'=>'<div class="clear"></div>
-
-    <div>
-        <label>Comment</label>
-        <textarea name="comment" cols="58" rows="7" class="sm-form-control"></textarea>
+    'comment_field'=>
+    '<div>
+        <label>'. __( 'Comment <span class="required">*</span> :', 'hs' ) . '</label>
+        <textarea name="comment" cols="58" rows="7" required></textarea>
     </div>',
     'fields'                =>  [
         'author'            =>  
             '<div class="col_one_third">
-                <label>' . __( 'Name', 'hs' ) . '</label>
-                <input type="text" name="author" class="sm-form-control" />
+                <label>' . __( 'Name <span class="required">*</span> : ', 'hs' ) . '</label>
+                <input type="text" name="author"/>
             </div>',
         'email'             =>  
             '<div class="col_one_third">
-                <label>' . __( 'Email', 'hs' ) . '</label>
-                <input type="text" name="email" class="sm-form-control" />
+                <label>' . __('Email <span class="required">*</span> : ', 'hs' ) . '</label>
+                <input type="text" name="email" />
             </div>',
         'url'               =>  
-            '<div class="col_one_third col_last">
-                <label>' . __( 'Website', 'hs' ) . '</label>
-                <input type="text" name="url" class="sm-form-control" />
+            '<div>
+                <label>' . __( 'Website : ', 'hs' ) . '</label>
+                <input type="text" name="url"/>
             </div>'
     ],
-    'class_submit'          =>  'button button-3d nomargin',
+    'class_submit'          =>  'mainButton buttonHot',
     'label_submit'          =>  __( 'Submit Comment', 'hs' ),
     'title_reply'           =>  __( 'Leave a <span>Comment</span>', 'hs' )
 ]);
