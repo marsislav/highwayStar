@@ -293,6 +293,16 @@ h2  a, .mainSidebar ul li a, td a, .wp-calendar-nav span a, ul.meta-tags li a {
 	color:#fff;
 
 }
+.older {
+	float:left;
+}
+.newer {
+	float:right;
+}
+.newer:after {
+	content: " ";
+	clear:both;
+}
 
 .mainButton.buttonHot.newer:empty,.mainButton.buttonCold.older:empty {
 	display:none;
@@ -312,7 +322,9 @@ aside {
 	width: 100%;
 	float: none;
 }
-
+.mainSidebar {
+	padding:0 0 0 10px;
+}
 .mainSidebar  h4{
 color:#04384D;
 margin:0 0 20px 0;
