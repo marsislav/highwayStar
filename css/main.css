@@ -70,6 +70,9 @@ h6 {font-size: 18px;}
 	margin: 10px 20px 13px 20px;
 	font-style: italic;
 }
+.required {
+	color:#DF003A;
+}
 
 .wp-caption img,
 .wp-caption img a {
@@ -255,6 +258,63 @@ h2  a, .mainSidebar ul li a, td a, .wp-calendar-nav span a, ul.meta-tags li a {
   }
 /**/
 
+/*prev/next links*/
+p.mainButton.buttonCold.older a, p.mainButton.buttonHot.newer a {
+	position: relative;
+	color: #fff;
+	text-decoration:none;
+	font-size: 26px;
+	
+  }
+  p.mainButton.buttonCold.older:hover a, p.mainButton.buttonHot.newer:hover a {
+	color: #DF003A;  
+  }
+  p.mainButton.buttonCold.older a:before, p.mainButton.buttonHot.newer a:before { 
+  content: "";
+	position: absolute;
+	width: 100%;
+	height: 2px;
+	bottom: 0;
+	left: 0;
+	background-color: #DF003A;
+	visibility: hidden;
+	-webkit-transform: scaleX(0);
+	transform: scaleX(0);
+	-webkit-transition: all 0.3s ease-in-out 0s;
+	transition: all 0.3s ease-in-out 0s;
+}
+p.mainButton.buttonCold.older:hover a:before, p.mainButton.buttonHot.newer:hover a:before{
+visibility: visible;
+background-color: #04384D;
+-webkit-transform: scaleX(1);
+transform: scaleX(1);
+}
+
+  h2  a:hover, .mainSidebar ul li a:hover, td a:hover, .wp-calendar-nav span a:hover, ul.meta-tags li a:hover {
+	color: #DF003A;
+  }
+	h2 a:before, .mainSidebar ul li a:before, td a:before, .wp-calendar-nav span a:before, ul.meta-tags li a:before {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 2px;
+	bottom: 0;
+	left: 0;
+	background-color: #DF003A;
+	visibility: hidden;
+	-webkit-transform: scaleX(0);
+	transform: scaleX(0);
+	-webkit-transition: all 0.3s ease-in-out 0s;
+	transition: all 0.3s ease-in-out 0s;
+  }
+  h2 a:hover:before, .mainSidebar ul li a:hover:before, td a:hover:before, .wp-calendar-nav span a:hover:before, ul.meta-tags li a:hover:before {
+	visibility: visible;
+	background-color: #04384D;
+	-webkit-transform: scaleX(1);
+	transform: scaleX(1);
+  }
+/**/
+
 .container {
 	max-width:95%;
 	margin:0 auto;
@@ -293,15 +353,9 @@ h2  a, .mainSidebar ul li a, td a, .wp-calendar-nav span a, ul.meta-tags li a {
 	color:#fff;
 
 }
-.older {
-	float:left;
-}
-.newer {
-	float:right;
-}
-.newer:after {
-	content: " ";
-	clear:both;
+.older, .newer {
+	width: 100%;
+	text-align: center;
 }
 
 .mainButton.buttonHot.newer:empty,.mainButton.buttonCold.older:empty {
@@ -397,8 +451,14 @@ display:inline-block;
 .commentsForm{
 	margin:30px 0;
 }
+.comment-notes {
+	margin-bottom:15px;
+}
 .commentList{
 	margin-bottom:30px;
+}
+.comment-reply-title {
+	margin-bottom: 15px;
 }
 .commentsForm textarea, .commentsForm input[type=text]  {
 	width:100%;
@@ -421,7 +481,10 @@ display:inline-block;
 .relatedPostsContainer {
 	justify-content: space-between;
 }
-
+.authorAvatar {
+	margin:0;
+	float:none;
+} 
 /*DESKTOP*/
 @media only screen and (min-width: 1200px) {
 
@@ -469,4 +532,108 @@ aside {
 	width: 77%;
     height: 25px;
 }
+.authorAvatar {
+	margin:0 10px 0 0;
+	float:left;
 }
+}
+
+
+
+/*Fixed Search field & cart button*/
+
+.fa-shopping-cart {
+	width: 40px;
+	height: 40px;
+	background: #DF003A;
+	border-radius: 50%;
+	right: 20px;
+	top: 10px;
+	cursor: pointer;
+	text-align: center;
+	line-height: 40px;
+	font-size: 20px;
+	color: #fff;
+}
+
+.search-box {
+	width: 450px;
+	height: 100px;
+	position: relative;
+  }
+  
+  .input {
+	position: absolute;
+	top: 10px;
+	right: 20px;
+	box-sizing: border-box;
+	width: 0px;
+	height: 40px;
+	padding: 0 18px;
+	outline: none;
+	font-size: 18px;
+	border-radius: 50px;
+	color: #29313a;
+	border: 3px solid#0D98BA;
+	transition: all 0.8s ease;
+  }
+  
+  ::-webkit-input-placeholder {
+	/* Chrome/Opera/Safari */
+	color: #0D98BA;
+  }
+  ::-moz-placeholder {
+	/* Firefox 19+ */
+	color: #0D98BA;
+  }
+  :-ms-input-placeholder {
+	/* IE 10+ */
+	color: #0D98BA;
+  }
+  :-moz-placeholder {
+	/* Firefox 18- */
+	color: #0D98BA;
+  }
+  
+  .btn {
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	background: #0D98BA;
+	border-radius: 50%;
+	right: 20px;
+	top: 10px;
+	cursor: pointer;
+	text-align: center;
+	line-height: 40px;
+	font-size: 20px;
+	color: #fff;
+	transition: all 0.8s ease;
+  }
+  
+  .input.active {
+	width: 300px;
+	right: 20px;
+  }
+  
+  .btn.animate {
+	transform: rotate(-360deg);
+	right: 20px;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  

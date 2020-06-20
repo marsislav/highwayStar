@@ -11,6 +11,8 @@
                         ?>
 
         </div>
+                </div>
+                <div class="misc">
         <div class="shop">
                 
         <?php if( get_theme_mod( 'hs_fixed_show_cart' ) ){
@@ -45,10 +47,14 @@ get_template_part('partials/post/content-excerpt');
 }
 }
 ?>
-        <ul>
-        <li class="mainButton buttonCold older"><?php next_posts_link('&larr; Older'); ?></li>
-        <li class="mainButton buttonHot newer"><?php previous_posts_link('&larr; Newer'); ?><li>
-        </ul>
+        <div class="row">
+                <div class="one-half column">
+                        <p class="mainButton buttonCold older"><?php next_posts_link('&larr; Older posts'); ?></p>
+                </div>
+                <div class="one-half column">
+                        <p class="mainButton buttonHot newer"><?php next_posts_link('Newer posts &rarr;'); ?></p>
+                </div>
+        </div>
         </main>
 <aside>
 <?php get_sidebar ();?>

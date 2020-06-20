@@ -4,6 +4,9 @@
          <?php if (have_posts()){
             while (have_posts() ){
                 the_post();
+                global $post;
+                        $author_ID          =   $post->post_author;
+                        $author_URL         =   get_author_posts_url( $author_ID );
         ?>
          <?php
             get_template_part('partials/post/content-single');
@@ -24,11 +27,13 @@
          </div>
          <?php } ?>
          <div class="authorInfo">
-             <p class="authorTitile"><?php _e ('Posted by', 'hs');?> <a href="<?php $author_URL ;?>"><?php the_author();?></a></p>
-             <div class="avatar">
-                 <?php echo get_avatar($author_ID, 90, '', false, ['class'=>'img-circle'] );?>
+             <p class="authorTitile"><?php _e ('Posted by', 'hs');?> <a href="<?php echo get_author_posts_url(get_the_author_meta('ID'));?>"><?php the_author();?></a> : </p>
+             <div class="authorAvatar">
+                 <?php echo get_avatar( $author_ID, 90, '', false, [ 'class' => 'img-circle' ] ); ?>
              </div>
+             <div class="authorInfo">
              <?php echo nl2br (get_the_author_meta('description'));?>
+             </div>    
          </div>
 
          </main>

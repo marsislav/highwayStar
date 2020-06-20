@@ -21,19 +21,17 @@ function hs_misc_customizer_section( $wp_customize ){
 
     $wp_customize->add_setting( 'hs_footer_copyright_text', array(
         'default'       =>  'Copyrights &copy; 2020 All Rights Reserved.',
-        'transport'=>'postMessage',
         'sanitize_callback' => 'wp_filter_nohtml_kses'
     ));
 
     $wp_customize->add_setting( 'hs_footer_tos_page', array(
         'default'       =>  0,
-        'transport'=>'postMessage',
+        'transport'     =>  'postMessage',
         'sanitize_callback' => 'absint'
     ));
 
     $wp_customize->add_setting( 'hs_footer_privacy_page', array(
         'default'       =>  0,
-        'transport'=>'postMessage',
         'sanitize_callback' => 'absint'
     ));
 

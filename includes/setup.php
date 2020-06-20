@@ -1,4 +1,9 @@
 <?php function hs_setup_theme () {
+if ( ! function_exists( 'wp_body_open' ) ) {
+    function wp_body_open() {
+        do_action( 'wp_body_open' );
+    }
+}
 add_theme_support('post-thumbnails');
 add_theme_support('title-tag');
 add_theme_support('custom-logo');
@@ -74,7 +79,7 @@ add_theme_support('starter-content', [
         'secondary'             =>  array(
             'name'              =>  __( 'Secondary Menu', 'hs' ),
             'items'             =>  array(
-                'link_home', // Note that the core "home" page is actually a link in case a static front page is not used.
+                'link_home',
                 'page_about',
                 'page_blog',
                 'page_contact',

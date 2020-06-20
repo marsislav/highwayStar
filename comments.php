@@ -35,12 +35,12 @@ comment_form([
     </div>',
     'fields'                =>  [
         'author'            =>  
-            '<div class="col_one_third">
+            '<div>
                 <label>' . __( 'Name <span class="required">*</span> : ', 'hs' ) . '</label>
                 <input type="text" name="author"/>
             </div>',
         'email'             =>  
-            '<div class="col_one_third">
+            '<div>
                 <label>' . __('Email <span class="required">*</span> : ', 'hs' ) . '</label>
                 <input type="text" name="email" />
             </div>',
